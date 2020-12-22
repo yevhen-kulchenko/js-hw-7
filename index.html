@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>JavaScript is fun!</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
@@ -43,15 +44,62 @@
     <!-- task2 -->
     <ul id="ingredients" class="js-ingredients"></ul>
 
-    <!-- task2 -->
-    <ul id="gallery" class="js-gallery"></ul>
+    <!-- task3 -->
+    <ul id="gallery" class="gallery js-gallery"></ul>
+
+    <!-- task4 -->
+    <div id="counter" class="positioning js-counter">
+      <button class="button" type="button" data-action="decrement">-1</button>
+      <span id="value" class="value-style js-value">0</span>
+      <button class="button" type="button" data-action="increment">+1</button>
+    </div>
+
+    <!-- task5 -->
+    <input
+      type="text"
+      placeholder="Ваше имя?"
+      id="name-input"
+      class="input js-input"
+    />
+    <h1 class="output">
+      Привет,
+      <span id="name-output" class="js-output">незнакомец</span>!
+    </h1>
+
+    <!-- task6 -->
+    <input
+      type="text"
+      id="validation-input"
+      data-length="6"
+      placeholder="Введи 6 символов"
+      class="input js-validation"
+    />
+
+    <!-- task7 -->
+    <input
+      id="font-size-control"
+      type="range"
+      class="input js-font-size-control"
+    />
+    <br />
+    <span id="text" class="input js-text">Абракадабра!</span>
+
+    <!-- task8 -->
+    <div id="controls">
+      <input type="number" min="0" max="100" step="1" />
+      <button type="button" data-action="render">Создать</button>
+      <button type="button" data-action="destroy">Очистить</button>
+    </div>
+
+    <div id="boxes"></div>
 
     <script src="./js/task1.js" type="module"></script>
     <script src="./js/task2.js" type="module"></script>
     <script src="./js/task3.js" type="module"></script>
-    <!-- <script src="./js/task4.js" type="module"></script> -->
-    <!-- <script src="./js/task5.js" type="module"></script> -->
-    <!-- <script src="./js/task6.js" type="module"></script> -->
-    <!-- <script src="./js/task7.js" type="module"></script> -->
+    <script src="./js/task4.js" type="module"></script>
+    <script src="./js/task5.js" type="module"></script>
+    <script src="./js/task6.js" type="module"></script>
+    <script src="./js/task7.js" type="module"></script>
+    <!-- <script src="./js/task8.js" type="module"></script> -->
   </body>
 </html>

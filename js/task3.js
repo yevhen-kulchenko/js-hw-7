@@ -16,14 +16,19 @@ const images = [
   },
 ];
 
+const createGalleryListRef = ({ url, alt }) => {
+  const imageRef = document.createElement('li');
+  imageRef.classList.add('image-list');
+  imageRef.insertAdjacentHTML(
+    'afterbegin',
+    `<img src=${url} alt=${alt}></img>`,
+  );
+  return imageRef;
+};
+
+const values = images.map(value => createGalleryListRef(value));
+
 const galleryRef = document.querySelector('.js-gallery');
+galleryRef.append(...values);
 
-// const createGalleryList =value => {
-//   const elementRef = document.createElement('li');
-//   elementRef.textContent = value;
-//   return elementRef;
-// };
-
-// const values = ingredients.map(value => createItemElement(value));
-
-// galleryRef.append(...values);
+console.log('Элементы галереи созданы!');
