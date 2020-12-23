@@ -4,6 +4,9 @@ const destroyBtnRef = document.querySelector('button[data-action="destroy"]');
 const boxesRef = document.querySelector('.js-boxes');
 boxesRef.classList.add('parentBox');
 
+let width = 30;
+let hight = 30;
+
 const getRandomRgb = () => {
   let color = '';
   for (let i = 0; i < 3; i += 1) {
@@ -17,8 +20,8 @@ const createBoxes = amount => {
     const storageRef = document.createElement('div');
     storageRef.classList.add('newStorage');
     storageRef.style.backgroundColor = getRandomRgb();
-    storageRef.style.width = `${30 + i * 10}px`;
-    storageRef.style.height = `${30 + i * 10}px`;
+    storageRef.style.width = `${(width += 10)}px`;
+    storageRef.style.height = `${(hight += 10)}px`;
     storageRef.style.marginRight = '5px';
     boxesRef.append(storageRef);
   }
@@ -27,6 +30,8 @@ const createBoxes = amount => {
 const destroyBoxes = () => {
   inputRef.value = '';
   boxesRef.querySelectorAll('div').forEach(div => div.remove());
+  width = 30;
+  hight = 30;
 };
 
 inputRef.addEventListener('focus', event => {
